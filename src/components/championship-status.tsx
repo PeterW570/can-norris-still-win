@@ -22,9 +22,10 @@ export function ChampionshipStatusComponent() {
     ? "Yes, Norris can still win the championship!"
     : "No, Norris cannot win the championship anymore."
 
-  const norVerOneTwoResult = norVerOneTwoResultDiff > 0
-    ? `Yes, Norris would win the championship by ${Math.abs(norVerOneTwoResultDiff)} points!`
-    : `No, Norris would lose the championship by ${Math.abs(norVerOneTwoResultDiff)} points.`
+  const norVerOneTwoDiff = Math.abs(norVerOneTwoResultDiff);
+  const norVerOneTwoResult = norVerOneTwoResultDiff === 0 ? "Norris and Verstappen would be on equal points."
+    : norVerOneTwoResultDiff > 0 ? `Yes, Norris would win the championship by ${norVerOneTwoDiff} point${norVerOneTwoDiff > 1 ? "s" : ""}!`
+    : `No, Norris would lose the championship by ${norVerOneTwoDiff} point${norVerOneTwoDiff > 1 ? "s" : ""}.`
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
