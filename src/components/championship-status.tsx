@@ -14,11 +14,9 @@ export function ChampionshipStatusComponent() {
   const maxNorrisPoints = norrisPoints + maxRemainingPoints
   const canNorrisWin = maxNorrisPoints > verstappenPoints
 
-  const allFirsts = remainingRaces * 25 + remainingSprints * 8
   const allSecond = remainingRaces * 18 + remainingSprints * 7
-  const norrisWinsRemaining = norrisPoints + allFirsts
   const verstappenRunnerUpRemaining = verstappenPoints + allSecond
-  const norVerOneTwoResultDiff = norrisWinsRemaining - verstappenRunnerUpRemaining
+  const norVerOneTwoResultDiff = maxNorrisPoints - verstappenRunnerUpRemaining
 
   const result = canNorrisWin
     ? "Yes, Norris can still win the championship!"
@@ -72,7 +70,7 @@ export function ChampionshipStatusComponent() {
           <div className="p-4 bg-primary/10 rounded-md">
             <p className="text-primary font-semibold text-center">{result}</p>
           </div>
-          <p className='italic text-center'>What if every race is Nor-Ver 1-2 and neither get fastest lap?</p>
+          <p className='italic text-center'>What if every race is Nor-Ver 1-2 with Norris fastest lap?</p>
           <div className="p-4 bg-primary/10 rounded-md">
             <p className="text-primary font-semibold text-center">{norVerOneTwoResult}</p>
           </div>
