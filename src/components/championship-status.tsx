@@ -3,9 +3,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export function ChampionshipStatusComponent() {
-  const verstappenPoints = 354
-  const norrisPoints = 297
-  const remainingRaces = 5
+  const verstappenPoints = 362
+  const norrisPoints = 315
+  const remainingRaces = 4
   const remainingSprints = 2
   const maxPointsPerRace = 26 // 25 for win + 1 for fastest lap
   const maxPointsPerSprint = 8 // Maximum points for sprint race
